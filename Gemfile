@@ -37,9 +37,7 @@ group :development, :test do
   gem 'sqlite3', '1.3.13'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '9.0.6',platforms: :mri
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
+  
 end
 
 group :development do
@@ -51,5 +49,10 @@ group :development do
   gem 'spring-watcher-listen', '2.0.1'
 end
 
+group :production do
+  gem 'pg', '0.20.0'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
